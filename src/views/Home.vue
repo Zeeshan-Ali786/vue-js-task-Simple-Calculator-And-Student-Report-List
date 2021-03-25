@@ -5,7 +5,6 @@
         <v-container fluid>
           <v-row class="text-center">
             <v-col cols="12">
-                <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
                 <MainComponent/>
             </v-col>
           </v-row>
