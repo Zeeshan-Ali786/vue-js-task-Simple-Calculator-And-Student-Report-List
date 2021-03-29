@@ -106,7 +106,31 @@ export default {
         getResult() {
             this.result = eval(this.value);
         },
-    }
+    },
+    mounted () {
+    // Support keyboard entry
+    window.addEventListener('keyup', event => {
+      if (event.key === '*') return this.addExpresion('*');
+      if (event.key === '/') return this.addExpresion('/');
+      if (event.key === '-') return this.addExpresion('-');
+      if (event.key === '+') return this.addExpresion('+');
+      if (event.key === '%') return this.addExpresion('%');
+      if (event.key === 'Escape') return this.clear();
+      if (event.key === 'Backspace') return this.del();
+      if (event.key === 'Enter') return this.getResult();
+      if (event.key === '.') return this.addExpresion('.');
+      if (event.key === '0') return this.addExpresion('0');
+      if (event.key === '1') return this.addExpresion('1');
+      if (event.key === '2') return this.addExpresion('2');
+      if (event.key === '3') return this.addExpresion('3');
+      if (event.key === '4') return this.addExpresion('4');
+      if (event.key === '5') return this.addExpresion('5');
+      if (event.key === '6') return this.addExpresion('6');
+      if (event.key === '7') return this.addExpresion('7');
+      if (event.key === '8') return this.addExpresion('8');
+      if (event.key === '9') return this.addExpresion('9');
+    });
+  }
 }
 </script>
 
@@ -141,7 +165,7 @@ export default {
 .centered_input_two{
     margin-bottom : 1rem;
     font-weight: lighter;
-    font-size: 2.6rem;
+    font-size: 2.0rem;
 }
 .centered_input_one >>> input {
       text-align: right;
